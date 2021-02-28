@@ -3,6 +3,7 @@ module.exports = {
     title: "Computational Journalism",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-sharp",
     "gatsby-plugin-offline",
@@ -14,6 +15,14 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-plugin-subfont`,
+      options: {
+        silent: true,
+        fallback: false,
+        inlineFonts: true,
+      },
     },
   ],
 };
